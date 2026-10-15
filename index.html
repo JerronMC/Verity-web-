@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f7f9">
+  <meta name="description" content="Verity AI — your personal helper friend.">
+  <title>Verity AI</title>
+  <link rel="icon" href="assets/verity-ball.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/codebox.js"></script>
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <svg class="svg-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="m12 3 1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7L12 3Z"/><path d="m19 15 .9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9L19 15Z"/></symbol>
+    <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-8.9 8.4 9.6 9.6 0 0 1-4-.9L3 20l1.2-4.1a8.1 8.1 0 0 1-1.4-4.4A8.4 8.4 0 0 1 11.6 3 8.4 8.4 0 0 1 21 11.5Z"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="m19.4 15 .1.1 1.1 1.8-1.8 3.1-2-.5a8 8 0 0 1-1.8 1l-.8 1.9h-3.6l-.8-1.9a8 8 0 0 1-1.8-1l-2 .5L4.2 17l1.1-1.9a8 8 0 0 1 0-2.1l-1.1-1.8L6 8.1l2 .5a8 8 0 0 1 1.8-1l.8-1.9h3.6l.8 1.9a8 8 0 0 1 1.8 1l2-.5 1.8 3.1-1.1 1.8a8 8 0 0 1-.1 2Z"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3M8 22h8"/></symbol>
+    <symbol id="i-volume" viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.5 14.1A8.5 8.5 0 0 1 9.9 3.5 8.5 8.5 0 1 0 20.5 14.1Z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="m3 3 18 18M10.6 10.6a2 2 0 0 0 2.8 2.8"/><path d="M9.9 5.2A9 9 0 0 1 12 5c6.4 0 10 7 10 7a13.2 13.2 0 0 1-3.2 3.9M6.2 6.2C3.5 8.1 2 12 2 12s3.6 7 10 7a9.7 9.7 0 0 0 4-.8"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-move-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M5.6 9A7 7 0 0 1 18 6l2 6M4 12l2 6a7 7 0 0 0 12.4-3"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-magic" viewBox="0 0 24 24"><path d="m15 4 5 5M4 20 16 8M3 7l2 2m4-7 1 3m8 11 3 1m-8 3 2 1"/><path d="m13 3 1.5 4.5L19 9l-4.5 1.5L13 15l-1.5-4.5L7 9l4.5-1.5L13 3Z"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M8 6V4h8v2m3 0-1 14H6L5 6m4 4v6m6-6v6"/></symbol>
+    <symbol id="i-clip" viewBox="0 0 24 24"><path d="m21 11.5-8.8 8.8a6 6 0 0 1-8.5-8.5l9.2-9.2a4 4 0 0 1 5.7 5.7L9.1 17.8a2 2 0 0 1-2.8-2.8l8.5-8.5"/></symbol>
+  </svg>
+
+  <section id="setupScreen" class="setup-screen">
+    <div class="setup-card">
+      <div class="setup-hero">
+        <div class="brand-lockup"><img src="assets/verity-ball.svg" alt="" class="brand-ball"><div><strong>Verity AI</strong><span>YOUR PERSONAL HELPER FRIEND</span></div></div>
+        <div class="hero-orbit"><img src="assets/verity-ball.svg" alt="Smiling yellow Verity mascot"></div>
+        <h1>Meet your new<br><em>favorite helper.</em></h1>
+        <p>One friendly place to chat, create images, code, and talk out loud.</p>
+        <div class="hero-pills"><span><svg class="icon"><use href="#i-message"/></svg> Smart chat</span><span><svg class="icon"><use href="#i-code"/></svg> CodeBox</span><span><svg class="icon"><use href="#i-image"/></svg> Image studio</span></div>
+      </div>
+      <form id="setupForm" class="setup-form">
+        <div class="eyebrow">LET'S GET YOU SET UP</div>
+        <h2>Connect your tools</h2>
+        <p class="setup-subtitle">Your keys stay in this browser and are sent to the services only when you use them.</p>
+        <label for="groqKey">Groq API key <span class="required">Required for chat</span></label>
+        <div class="secret-field"><input id="groqKey" name="groqKey" type="password" autocomplete="off" placeholder="gsk_…"><button type="button" class="icon-btn reveal-key" data-target="groqKey" aria-label="Show Groq key"><svg class="icon"><use href="#i-eye"/></svg></button></div>
+        <label for="modelSelect">Chat model</label>
+        <select id="modelSelect" name="model"><option value="openai/gpt-oss-120b">openai/gpt-oss-120b — highest capability</option><option value="openai/gpt-oss-20b">openai/gpt-oss-20b — faster</option><option value="llama-3.3-70b-versatile">llama-3.3-70b-versatile</option><option value="llama-3.1-8b-instant">llama-3.1-8b-instant</option></select>
+        <div class="setup-actions"><button type="button" id="testGroq" class="btn btn-secondary"><svg class="icon"><use href="#i-check"/></svg> Test Groq</button><button type="button" id="refreshModels" class="btn btn-secondary"><svg class="icon"><use href="#i-refresh"/></svg> Refresh models</button></div>
+        <div class="section-label"><span class="section-glyph"><svg class="icon"><use href="#i-volume"/></svg></span><div><strong>Voice & microphone</strong><small>Talk to Verity and hear replies.</small></div></div>
+        <label for="fishKey">Fish Audio API key <span class="optional">Optional</span></label>
+        <div class="secret-field"><input id="fishKey" name="fishKey" type="password" autocomplete="off" placeholder="Fish Audio API key"><button type="button" class="icon-btn reveal-key" data-target="fishKey" aria-label="Show Fish Audio key"><svg class="icon"><use href="#i-eye"/></svg></button></div>
+        <label for="voiceId">Fish Audio voice model ID <span class="optional">Optional</span></label>
+        <input id="voiceId" name="voiceId" type="text" placeholder="Voice reference ID (optional)">
+        <div class="setup-actions"><button type="button" id="allowMic" class="btn btn-secondary"><svg class="icon"><use href="#i-mic"/></svg> Allow microphone</button><button type="button" id="testVoice" class="btn btn-secondary"><svg class="icon"><use href="#i-volume"/></svg> Test voice</button></div>
+        <p id="permissionStatus" class="permission-status">Microphone permission hasn't been requested yet.</p>
+        <div class="section-label"><span class="section-glyph"><svg class="icon"><use href="#i-image"/></svg></span><div><strong>Image generation</strong><small>Use OpenAI's image API to create images.</small></div></div>
+        <label for="openaiKey">OpenAI API key <span class="optional">Optional for images</span></label>
+        <div class="secret-field"><input id="openaiKey" name="openaiKey" type="password" autocomplete="off" placeholder="sk-…"><button type="button" class="icon-btn reveal-key" data-target="openaiKey" aria-label="Show OpenAI key"><svg class="icon"><use href="#i-eye"/></svg></button></div>
+        <div class="status-line" id="setupStatus" aria-live="polite"></div>
+        <button type="submit" class="btn btn-primary setup-submit">Save settings & start chatting <svg class="icon"><use href="#i-send"/></svg></button>
+        <div class="privacy-line"><svg class="icon"><use href="#i-shield"/></svg><span>Use on a private device. Keys are stored in this browser's local storage. The local server only relays API requests.</span></div>
+      </form>
+    </div>
+  </section>
+
+  <div id="appShell" class="app-shell hidden">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top"><div class="brand-lockup compact"><img src="assets/verity-ball.svg" alt="" class="brand-ball"><div><strong>Verity <span>AI</span></strong><small>YOUR HELPER FRIEND</small></div></div><button id="closeSidebar" class="icon-btn mobile-only" aria-label="Close menu"><svg class="icon"><use href="#i-close"/></svg></button></div>
+      <button class="btn btn-new-chat" id="newChat"><svg class="icon"><use href="#i-plus"/></svg> New chat <span class="kbd">⌘ K</span></button>
+      <div class="nav-caption">WORKSPACE</div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-page="chat"><svg class="icon"><use href="#i-message"/></svg><span>Chat</span></button>
+        <button class="nav-item" data-page="code"><svg class="icon"><use href="#i-code"/></svg><span>CodeBox</span><span class="nav-badge">IDE</span></button>
+        <button class="nav-item" data-page="images"><svg class="icon"><use href="#i-image"/></svg><span>Image Studio</span></button>
+      </nav>
+      <div class="sidebar-divider"></div><div class="history-head"><span>RECENT CHATS</span><button class="icon-btn small" id="clearChats" aria-label="Clear recent chats"><svg class="icon"><use href="#i-trash"/></svg></button></div>
+      <div id="chatHistory" class="chat-history"><div class="history-empty">Your conversations will appear here.</div></div>
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-bottom"><button id="openSettings" class="nav-item"><svg class="icon"><use href="#i-settings"/></svg><span>Settings & API</span></button><button id="userProfileBtn" class="user-profile-btn"><span class="avatar user-avatar" id="sidebarUserAvatar">U</span><span class="user-meta"><strong id="sidebarUserName">You</strong><small>Personal workspace</small></span><svg class="icon profile-chevron"><use href="#i-chevron"/></svg></button></div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar"><button id="openSidebar" class="icon-btn mobile-only" aria-label="Open menu"><svg class="icon"><use href="#i-menu"/></svg></button><div class="topbar-context"><span class="status-dot"></span><span id="topbarTitle">Chat with Verity</span><span class="topbar-separator">/</span><span id="topbarSubtitle">Always here to help</span></div><div class="topbar-actions"><span class="model-chip"><span class="status-dot"></span><span id="activeModelLabel">GPT-OSS 120B</span></span><button id="verityProfileBtn" class="icon-btn profile-quick" title="Verity profile"><img src="assets/verity-ball.svg" alt="Verity"></button><button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme"><svg class="icon"><use href="#i-moon"/></svg></button></div></header>
+
+      <section class="page page-chat" id="pageChat">
+        <div class="chat-scroll" id="chatScroll"><div class="messages-wrap" id="messagesWrap"></div><button id="jumpLatest" class="jump-latest hidden"><svg class="icon"><use href="#i-move-down"/></svg> Latest message</button></div>
+        <div class="composer-shell"><div class="composer-suggestions" id="suggestions"><button class="suggestion" data-prompt="Help me organize my day into a simple plan."><svg class="icon"><use href="#i-sparkle"/></svg> Plan my day</button><button class="suggestion" data-prompt="Write a clean, responsive website in HTML, CSS, and JavaScript."><svg class="icon"><use href="#i-code"/></svg> Write some code</button><button class="suggestion" data-prompt="Generate an image of a tiny glowing fantasy world inside a glass orb."><svg class="icon"><use href="#i-image"/></svg> Create an image</button></div>
+          <form id="chatForm" class="composer"><textarea id="chatInput" rows="1" placeholder="Message Verity…" aria-label="Message Verity"></textarea><div class="composer-toolbar"><div class="composer-tools"><button type="button" id="attachImage" class="tool-btn" title="Generate an image"><svg class="icon"><use href="#i-image"/></svg><span>Image</span></button><button type="button" id="openCodeBox" class="tool-btn" title="Open CodeBox"><svg class="icon"><use href="#i-code"/></svg><span>CodeBox</span></button><button type="button" id="voiceChatBtn" class="tool-btn" title="Start voice chat"><svg class="icon"><use href="#i-mic"/></svg><span>Voice</span></button></div><div class="composer-submit"><span class="input-hint">Enter to send · Shift+Enter for new line</span><button type="submit" id="sendBtn" class="send-btn" aria-label="Send message"><svg class="icon"><use href="#i-send"/></svg></button></div></div></form><div class="composer-footnote">Verity can make mistakes. Check important information.</div>
+        </div>
+      </section>
+
+      <section class="page page-code hidden" id="pageCode"><div class="workspace-heading"><div><div class="eyebrow">VERITY WORKSPACE</div><h1>CodeBox<span class="heading-dot">.</span></h1><p>Ask Verity to write code, then copy, download, or preview it.</p></div><div class="workspace-icon code-icon"><svg class="icon"><use href="#i-code"/></svg></div></div><div class="code-workspace"><div class="code-prompt-panel"><label for="codePrompt">What should Verity build?</label><textarea id="codePrompt" placeholder="Create a responsive landing page for a gaming community…"></textarea><div class="code-options"><label for="codeLanguage">Language</label><select id="codeLanguage"><option value="html">HTML website</option><option value="javascript">JavaScript</option><option value="css">CSS</option><option value="python">Python</option><option value="json">JSON</option><option value="typescript">TypeScript</option><option value="bash">Shell script</option></select></div><button id="generateCode" class="btn btn-primary full-btn"><svg class="icon"><use href="#i-magic"/></svg> Generate code</button></div><div class="code-editor-panel"><div class="editor-top"><div class="editor-dots"><i></i><i></i><i></i></div><span id="editorFilename">untitled.html</span><div class="editor-actions"><button class="editor-action" id="copyCode"><svg class="icon"><use href="#i-copy"/></svg><span>Copy</span></button><button class="editor-action" id="downloadCode"><svg class="icon"><use href="#i-download"/></svg><span>Download</span></button><button class="editor-action" id="previewCode"><svg class="icon"><use href="#i-sparkle"/></svg><span>Preview</span></button></div></div><textarea id="codeEditor" spellcheck="false" aria-label="Code editor" placeholder="Your generated code will appear here…"></textarea><div class="editor-status"><span><i class="status-dot"></i> Editable</span><span id="codeCharCount">0 characters</span></div></div></div><div class="code-safety"><svg class="icon"><use href="#i-shield"/></svg><span>Code runs only when you choose Preview. Do not run untrusted scripts outside the sandbox.</span></div></section>
+
+      <section class="page page-images hidden" id="pageImages"><div class="workspace-heading"><div><div class="eyebrow">CREATIVE WORKSPACE</div><h1>Image Studio<span class="heading-dot">.</span></h1><p>Turn a description into an image. Uses your OpenAI API key.</p></div><div class="workspace-icon image-icon"><svg class="icon"><use href="#i-image"/></svg></div></div><div class="image-studio-grid"><div class="image-prompt-panel"><label for="imagePrompt">Describe your image</label><textarea id="imagePrompt" placeholder="A cute yellow smiley ball mascot floating through a neon dream world, cinematic lighting, high detail…"></textarea><div class="image-config-row"><div><label for="imageSize">Aspect ratio</label><select id="imageSize"><option value="1024x1024">Square</option><option value="1536x1024">Landscape</option><option value="1024x1536">Portrait</option></select></div><div><label for="imageQuality">Quality</label><select id="imageQuality"><option value="medium">Standard</option><option value="high">High</option><option value="low">Fast</option></select></div></div><button id="generateImage" class="btn btn-primary full-btn"><svg class="icon"><use href="#i-magic"/></svg> Generate image</button><p class="small-note">Image generation can incur API charges. Your OpenAI key must have image generation access.</p></div><div class="image-result-panel" id="imageResult"><div class="image-placeholder"><div class="placeholder-art"><svg class="icon"><use href="#i-image"/></svg><span class="placeholder-spark">✧</span></div><strong>Your next idea starts here.</strong><p>Generated images will appear here with a download button.</p></div></div></div></section>
+
+      <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+    </main>
+  </div>
+
+  <div id="modalBackdrop" class="modal-backdrop hidden">
+    <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><header class="modal-header"><div><span class="eyebrow" id="modalEyebrow">SETTINGS</span><h2 id="modalTitle">Configure Verity</h2></div><button id="closeModal" class="icon-btn" aria-label="Close dialog"><svg class="icon"><use href="#i-close"/></svg></button></header><div id="modalBody" class="modal-body"></div><footer id="modalFooter" class="modal-footer"></footer></section>
+  </div>
+
+  <div id="permissionDialog" class="permission-dialog hidden" role="dialog" aria-modal="true" aria-labelledby="permissionTitle"><div class="permission-card"><div class="permission-icon"><svg class="icon"><use href="#i-mic"/></svg></div><h2 id="permissionTitle">Let Verity hear you</h2><p>Verity needs microphone access to listen to your voice. Your browser will ask for permission next. Audio is used for this conversation.</p><div class="permission-actions"><button class="btn btn-secondary" id="cancelPermission">Not now</button><button class="btn btn-primary" id="confirmPermission">Allow microphone</button></div><p class="small-note" id="permissionHelp">You can change this later in your browser's site settings.</p></div></div>
+
+  <template id="welcomeTemplate"><article class="welcome-block"><div class="welcome-mascot"><img src="assets/verity-ball.svg" class="verity-mascot speaking-face" alt="Verity, a yellow smiling ball"></div><div class="welcome-copy"><div class="welcome-kicker"><span class="status-dot"></span> YOUR FRIENDLY AI COMPANION</div><h1>Hello! I'm <span>Verity.</span></h1><p>Your Personal Helper Friend. Ask me anything — let's make something great.</p><div class="welcome-actions"><button class="welcome-action" data-prompt="Explain something interesting in a fun, easy way."><svg class="icon"><use href="#i-sparkle"/></svg> Teach me something</button><button class="welcome-action" data-prompt="Help me make a small but cool website."><svg class="icon"><use href="#i-code"/></svg> Build something</button></div></div></div><div class="day-divider"><span>YOUR CONVERSATION</span></div></article></template>
+</body>
+</html>

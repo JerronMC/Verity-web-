@@ -1,0 +1,8 @@
+{
+  "name": "verity-ai-website",
+  "version": "3.0.0",
+  "private": true,
+  "description": "Responsive Verity AI website with Groq chat, CodeBox, OpenAI image generation, and Fish Audio voice.",
+  "scripts": { "start": "node server.js", "check": "node --check server.js && node --check js/app.js && node --check js/codebox.js" },
+  "engines": { "node": ">=18" }
+}
